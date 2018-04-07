@@ -1,0 +1,16 @@
+import java.io.Console;
+
+public class DifferentRadixSummator {
+    public static void main(String[] args) {
+        Console c = System.console();
+        if (c == null) {
+            System.err.println("No console.");
+            System.exit(1);
+        }
+        int binaryCoord = Integer.parseInt(c.readLine("Enter X in Bin: "), 2);
+        int octoCoord = Integer.parseInt(c.readLine("Enter X in Oct: "), 8);
+        int hexCoord = Integer.parseInt(c.readLine("Enter X in Hex: "), 16);
+
+        System.out.println("x=+y+z="+(binaryCoord+octoCoord+hexCoord));
+    }
+}
