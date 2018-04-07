@@ -1,0 +1,30 @@
+import java.io.Console;
+
+public class ToyNameToIdConverter {
+    public static void main(String[] args) {
+        Console c = System.console();
+        if (c == null) {
+            System.err.println("No console.");
+            System.exit(1);
+        }
+
+        String toy = c.readLine().replaceAll(" ", "");
+
+        switch (toy.toLowerCase()) {
+            case "car":
+                System.out.println(0);
+                break;
+            case "lego":
+                System.out.println(1);
+                break;
+            case "doll":
+                System.out.println(2);
+                break;
+            case "puzzle":
+                System.out.println(3);
+                break;
+            default:
+                throw new IllegalArgumentException("incorrect input value");
+        }
+    }
+}
