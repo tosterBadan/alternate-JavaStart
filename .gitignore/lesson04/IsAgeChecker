@@ -1,0 +1,18 @@
+import java.io.Console;
+
+public class IsAgeChecker {
+    public static void main(String[] args) {
+        Console c = System.console();
+        if (c == null) {
+            System.err.println("No console.");
+            System.exit(1);
+        }
+
+        int age = Integer.parseInt(c.readLine("enter age: "));
+        if (age > 0 && age < 121) {
+            System.out.println("true");
+        } else {
+            System.out.println("false");
+        }
+    }
+}
