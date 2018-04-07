@@ -1,6 +1,6 @@
 import java.io.Console;
 
-public class DifferentRadixSummator {
+public class RangePrinter {
     public static void main(String[] args) {
         Console c = System.console();
         if (c == null) {
