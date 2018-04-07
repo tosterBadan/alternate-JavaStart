@@ -1,0 +1,23 @@
+import java.io.Console;
+
+public class IdToToyNameConverter {
+    public static void main(String[] args) {
+        Console c = System.console();
+        if (c == null) {
+            System.err.println("No console.");
+            System.exit(1);
+        }
+
+        int idToy = Integer.parseInt(c.readLine().replaceAll(" ", ""));
+
+        if (idToy == 0) {
+            System.out.println("Car");
+        } else if (idToy == 1) {
+            System.out.println("Lego");
+        } else if (idToy == 2) {
+            System.out.println("Doll");
+        } else if (idToy == 3) {
+            System.out.println("Puzzle");
+        } else throw new IllegalArgumentException("incorrect input value");
+    }
+}
